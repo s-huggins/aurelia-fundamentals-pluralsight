@@ -6,6 +6,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "sourceRoot": "src",
+    "sourceMap": true,
     "allowJs": true,
     "baseUrl": "src",
     "lib": [
@@ -15,6 +16,9 @@
   "exclude": [
     "node_modules",
     "dist",
-    "static"
+    "static",
+    "package-scripts.js",
+    "test",
+    "webpack.config.js"
   ]
 }
