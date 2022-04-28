@@ -1,3 +1,5 @@
 <template>
-  EventsList
+  <div repeat.for="event of events">
+    <compose model.bind="event" view-model="event"></compose>
+  </div>
 </template>

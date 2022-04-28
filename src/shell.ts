@@ -1,2 +1,1 @@
-export class Shell {
-}
+export class Shell {}
