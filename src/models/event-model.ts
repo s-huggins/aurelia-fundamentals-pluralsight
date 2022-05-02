@@ -1,9 +1,8 @@
-export interface IEvent {
-  id: number;
-  title: string;
-}
-
-export class EventModel implements IEvent {
+export class EventModel {
   public id: number;
+  public description: string;
+  public dateTime: string;
   public title: string;
+  public speaker: string;
+  public image: string;
 }

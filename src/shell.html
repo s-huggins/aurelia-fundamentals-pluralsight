@@ -2,7 +2,7 @@
   <require from="bootstrap/dist/css/bootstrap.min.css"></require>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-      <img src="../images/banner.gif" />
+      <img src="../static/images/banner.gif" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,14 +10,8 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Discussion</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Job Board</a>
+        <li repeat.for="route of router.navigation" class="nav-item ${route.isActive ? 'active' : ''}">
+          <a class="nav-link" href.bind="route.href">${route.title}</a>
         </li>
       </ul>
     </div>
@@ -26,10 +20,10 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-10">
-        <compose view-model="events-list"></compose>
+        <router-view></router-view>
       </div>
       <div class="col-2">
-        <compose view-model="sponsors"></compose>
+        <compose view-model="sponsors/sponsors"></compose>
       </div>
     </div>
   </div>
